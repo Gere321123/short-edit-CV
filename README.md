@@ -1,4 +1,4 @@
-This project is a video editor softare, wich helps people to make subtitle to there videos.
+This project is a video editor software, which helps people to make subtitle to their videos automatically.
 
 And don't included the credentials.json file, you need to enable a google speach to text api to use this softare.
 
