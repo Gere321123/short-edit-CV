@@ -62,21 +62,20 @@ def upload_video():
     # processor.save_video(PROCESSED_FOLDER)
 
     # Extract audio
-    # audio_path = video_service.extract_audio(video_path)
+    audio_path = video_service.extract_audio(video_path)
     
     # # Check the sample rate of the extracted audio
-    # sample_rate = get_sample_rate(audio_path)
-    # print(f"Audio Sample Rate: {sample_rate}")
+    sample_rate = get_sample_rate(audio_path)
+    #print(f"Audio Sample Rate: {sample_rate}")
 
     # # Save initial entry to database
-    # video_service.save_video(file.filename, video_path, audio_path)
-    # video_id = get_last_inserted_id()
+    video_service.save_video(file.filename, video_path, audio_path)
 
     
-    # video_id = os.path.splitext(file.filename)[0]
-    # audio_folder = os.path.join('audios', video_id)
+    video_id = os.path.splitext(file.filename)[0]
+    audio_folder = os.path.join('audios', video_id)
     
-    # transcribe_background(video_id,audio_folder)
+    transcribe_background(video_id,audio_folder)
 
     return jsonify({'message': 'Video uploaded successfully', 'video_id': file.filename}), 200
 
