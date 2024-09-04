@@ -4,4 +4,3 @@ And don't included the credentials.json file, you need to enable a google speach
 
 I use concurrent.futures for multiroces programing to make the the speach to text section faster
 
-It's still in proces. 
